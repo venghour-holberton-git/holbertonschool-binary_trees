@@ -1,8 +1,10 @@
 #include "binary_trees.h"
 
 /**
- * get_depth - get depth
- * @tree: input tree
+ * get_depth - measures the depth of the leftmost leaf in a tree
+ * @tree: pointer to the root node
+ *
+ * Return: depth (number of levels) of the tree
  */
 static int get_depth(const binary_tree_t *tree)
 {
@@ -17,10 +19,12 @@ static int get_depth(const binary_tree_t *tree)
 }
 
 /**
- * is_perfect_rec - check is perfect rec
- * @tree: input tree
- * @depth: depth
- * @level: tree level
+ * is_perfect_rec - recursively checks if a tree is perfect
+ * @tree: pointer to the current node
+ * @depth: expected depth of all leaves
+ * @level: current level in the tree
+ *
+ * Return: 1 if subtree is perfect, 0 otherwise
  */
 static int is_perfect_rec(const binary_tree_t *tree, int depth, int level)
 {
