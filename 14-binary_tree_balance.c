@@ -3,7 +3,7 @@
 /**
  * binary_tree_height - correct node-based height
  */
-static size_t binary_tree_height(const binary_tree_t *tree)
+size_t binary_tree_height(const binary_tree_t *tree)
 {
     size_t left, right;
 
