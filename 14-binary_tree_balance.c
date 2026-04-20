@@ -2,6 +2,7 @@
 
 /**
  * binary_tree_height - correct node-based height
+ * @tree: input binary tree
  * Return: tree height
  */
 size_t binary_tree_height(const binary_tree_t *tree)
@@ -19,6 +20,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
 
 /**
  * binary_tree_balance - measures balance factor
+ * @tree: input binary tree
  * Return: factor
  */
 int binary_tree_balance(const binary_tree_t *tree)
