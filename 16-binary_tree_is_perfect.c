@@ -1,6 +1,9 @@
 #include "binary_trees.h"
 
-/* helper function to find depth of leftmost leaf */
+/**
+ * get_depth - get depth
+ * @tree: input tree
+ */
 static int get_depth(const binary_tree_t *tree)
 {
 	int depth = 0;
@@ -13,17 +16,20 @@ static int get_depth(const binary_tree_t *tree)
 	return (depth);
 }
 
-/* recursive helper to check perfection */
+/**
+ * is_perfect_rec - check is perfect rec
+ * @tree: input tree
+ * @depth: depth
+ * @level: tree level
+ */
 static int is_perfect_rec(const binary_tree_t *tree, int depth, int level)
 {
 	if (tree == NULL)
 		return (1);
 
-	/* if leaf node */
 	if (tree->left == NULL && tree->right == NULL)
 		return (depth == level + 1);
 
-	/* if missing one child */
 	if (tree->left == NULL || tree->right == NULL)
 		return (0);
 
